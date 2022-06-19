@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Klasifikasi Relief Candi Borobudur - Predict</title>
+{% endblock %}
+
+{% block body %} 
+<div class="wrapper">
+			<div class="inner">
+				<form action="/" method="GET" enctype="multipart/form-data">
+					<h3>Prediksi Gambar</h3>
+                    </br>
+                    </br>
+                    
+                    {% if prediction %}
+					</br>
+                    <p class="text-center">Gambar {{prediction}}</p>
+                    {% endif %}
+
+					{% if images %}
+					<p>
+                    <center>
+						<img src={{images}} width="250" height="250"></img>
+					</center>
+					</p>
+                    {% endif %}
+                    
+				
+					<button type="submit">Go Back
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+
+                
+			</div>
+		</div>
+{% endblock %}
